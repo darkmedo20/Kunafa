@@ -7,7 +7,7 @@
       <span>
          <a href="{% url 'home' %}">Home</a> /
          <a href="{% url 'menu' %}">Menu</a>/
-         {{menu_item.name}}
+         {{menu_item.Title}}
       </span>
       <!--Begin row-->
       <div class="row">
@@ -26,7 +26,8 @@
          <!--End col-->
          <!--Begin col-->
          <div class="column">
-            <img src="/Final Assessment/littlelemon/restaurant/static/img/{{menu_item.name}}.jpg" alt="{{ menu_item.name}}" />
+            <img src="{% get_static_prefix %}img/{{ menu_item.Title }}.jpg" alt="{{ menu_item.Title }} image">
+            <!-- <img src="/Kuanafa/bakery/static/img/{{menu_item.Title}}.jpg" alt="{{ menu_item.Title}}" /> -->
         </div>
          <!--End col-->
       </div>
